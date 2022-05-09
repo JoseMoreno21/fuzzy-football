@@ -1,0 +1,24 @@
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.deps.json
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.pdb
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.csproj.AssemblyReference.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.AssemblyInfoInputs.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.AssemblyInfo.cs
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\refint\MATLABFuzzyDL.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.pdb
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\ref\MATLABFuzzyDL.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.deps.json
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\bin\Debug\net6.0\MATLABFuzzyDL.pdb
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.csproj.AssemblyReference.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.AssemblyInfoInputs.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.AssemblyInfo.cs
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.csproj.CoreCompileInputs.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\refint\MATLABFuzzyDL.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\MATLABFuzzyDL.pdb
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyDL\obj\Debug\net6.0\ref\MATLABFuzzyDL.dll

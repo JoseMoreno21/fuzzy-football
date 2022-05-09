@@ -1,0 +1,122 @@
+﻿@model LoginFuzzy.ViewModels.Registro
+@{
+    Layout = null;
+}
+
+<style>
+    .passwordvisreg {
+        display: inline!important;
+    }
+    .passderechare {
+        display: initial;
+        padding: 10px 10px 3px 3px;
+        margin-left: -40px;
+        opacity: 0.7;
+    }
+    .passderechaP2 {
+        font-size: 18px;
+    }
+</style>
+
+<script>
+    var contador = 0;
+    var contadito = 0;
+    function showText (x) {
+        x.type = "text";
+        document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-fill");
+        contador = 1;
+    }
+
+    function showPassword (x) {
+        x.type = "password";
+        document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-fill");
+        contador = 0;
+    }
+
+    function showPasswordHover (x) {
+        if(contador == 1){
+            x.type = "password";
+            document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-slash-fill");
+            document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-fill");
+            contador = 0;
+        }
+    }
+
+    function showTextPart2 (x) {
+        x.type = "text";
+        document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-fill");
+        contadito = 1;
+    }
+
+    function showPasswordPart2 (x) {
+        x.type = "password";
+        document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-fill");
+        contadito = 0;
+    }
+
+    function showPasswordHoverPart2 (x) {
+        if(contadito == 1){
+            x.type = "password";
+            document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-slash-fill");
+            document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-fill");
+            contadito = 0;
+        }
+    }
+</script>
+
+
+<div class="modal fade" tabindex="-1" id="form-modalreg" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registro</h5>
+        <button id="videomodalexample" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-12 col-md-12">
+                    <form asp-page-handler="RegistroR" onsubmit="butonregistro.disabled = true; return true;">
+                        <input name="IsValidP2" type="hidden" value="@ViewData.ModelState.IsValid.ToString()"/>
+                        <div asp-validation-summary="ModelOnly" class="text-danger">
+                        </div>
+                         <div class="mb-3">
+                            <label class="form-label" asp-for="Username">Usuario</label>
+                            <input type="text" asp-for="Username" class="form-control" id="inputuserreg"/>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Email">E-mail</label>
+                            <input type="text" asp-for="Email" class="form-control" id="inputemail"/>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 emer">
+                                <label class="form-label" asp-for="Password">Contraseña</label>
+                                <input type="password" asp-for="Password" class="form-control passwordvisreg" id="passwordregistro"/>
+                                <a class="btn passderechare" onmousedown="showText(passwordregistro)" onmouseup="showPassword(passwordregistro)" onmouseout="showPasswordHover(passwordregistro)"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePasswordRegistro"></i></a>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" asp-for="ConfirmPassword">Confirmar Contraseña</label>
+                                <input type="password" asp-for="ConfirmPassword" class="form-control passwordvisreg" id="passwordconfirmarregistro"/>
+                                <a class="btn passderechare" onmousedown="showTextPart2(passwordconfirmarregistro)" onmouseup="showPasswordPart2(passwordconfirmarregistro)" onmouseout="showPasswordHoverPart2(passwordconfirmarregistro)"><i class="passderechaP2 bi bi-eye-slash-fill" id="toggleConfirmPassword"></i></a>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <button id="butonregistro" type="button" class="btn btn-primary col-12 loadingclase" data-registro="modalP2">Registrarse</button>
+                        </div>
+                        <div class="centrado">
+                            <a class="cursorpunta" data-teleport="ajax-login">¿Ya estás registrado? Ingresa aquí.</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

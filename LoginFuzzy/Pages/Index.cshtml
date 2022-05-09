@@ -1,0 +1,175 @@
+﻿@page
+@using LoginFuzzy.Model
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@model IndexModel
+@{
+    ViewData["Title"] = "Bienvenido";
+}
+<style>
+    .carousel-item {
+        background: #777;
+        color: white;
+    }
+    .marketing h2 {
+        font-weight: 400;
+    }
+    @@media (min-width: 62em){
+        .featurette-heading{
+            margin-top: 7rem;
+        }
+    }
+    @@media (min-width: 40em){
+        .featurette-heading{
+            font-size: 50px
+        }
+    }
+    .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -.05rem;
+    }
+    @@media (min-width: 768px){
+        .col-md-7{
+            flex: 0 0 auto;
+            width: 58.3333333%;
+        }
+    }
+    @@media (min-width: 768px){
+        .col-md-5{
+            flex: 0 0 auto;
+            width: 41.66666667%;
+        }
+    }
+    .tamanoletra {
+        font-size: 30px;
+    }
+</style>
+
+<script>
+    $(function () {
+        $("#loginprt").click(function () {
+            $('#loginmodal').trigger("click");
+        });
+        $("#registroprt").click(function () {
+            $('#registromodal').trigger("click");
+        });
+    });
+</script>
+
+<div id="placeholdermax"></div>
+<div id="placeholdermaxP2"></div>
+
+<div id="myCarousel" class="spacioarriba mb-3 carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/cr7.jpg" class="d-block w-100" alt="Imagen_1"/>
+            <div class="carousel-caption d-none d-md-block">
+                @if (@ViewData["UsuarioNombre"] != null)
+                {
+                    <h5>¡Bienvenido @ViewData["UsuarioNombre"]!</h5>
+                }
+                else
+                {
+                    <h5>¡Bienvenido!</h5>
+                }
+                <p>Realiza un análisis de cualquier jugador de Fútbol.</p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a class="btn btn-lg btn-primary loadingclase" asp-page="/Futbolista" >¡Empieza Ahora!</a>
+                }
+                else
+                {
+                    <p>¡Ingresa o regístrate para empiezar a analizar!</p>
+                    <a id="loginprt" class="btn btn-lg btn-primary">Ingresar</a>
+                    <a id="registroprt" class="btn btn-lg btn-primary">Registrar</a>
+                }
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/messi.jpg" class="d-block w-100" alt="Imagen_2"/>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Administra tus resultados previos.</h5>
+                <p>Elimina y descarga resultados de previas operaciones.</p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a class="btn btn-lg btn-primary loadingclase" asp-page="/Historial">¡Vamos!</a>
+                }
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previo</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
+
+<div class="container marketing">
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">En primer lugar, <span class="text-muted">Analiza y descubre la mejor posición de un futbolista.</span></h2>
+        <p class="lead">Con la metodología de la lógica difusa se puede conocer la mejor posición para un futbolista y con ello determinar el mejor camino para alcanzar su máximo potencial.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="~/images/Parte1.jpg" width="100%" border="1"/>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">¡Y aún hay más!, <span class="text-muted">Almacena tus resultados.</span></h2>
+        <p class="lead">Se pueden almacenar una gran cantidad de análisis realizados a diversos jugadores. Además, es posible entender los resultados ya que son claros y precisos.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="~/images/Parte2.jpg" width="100%" border="1"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Y para terminar, <span class="text-muted">Exporta tus resultados.</span></h2>
+        <p class="lead">Todos los análisis realizados pueden ser extraídos y exportados a un archivo Microsoft Excel.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="~/images/Parte3.jpg" width="100%" border="1"/>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-6 centrado">
+        <img class="bd-placeholder-img rounded-circle featurette-image img-fluid mx-auto" width="140" height="140" src="~/images/JulioHuarachi.jpg" border="1"/>
+        <h2>Julio César Huarachi Macuri</h2>
+        <p class="mb-0">Ingeniero de Sistemas de Información.</p>
+        <p class="mb-0"><a class="btn mb-0" href="https://www.linkedin.com/in/jhuarachim/" target="_blank"><i class="bi bi-linkedin tamanoletra"></i></a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-6 centrado">
+        <img class="bd-placeholder-img rounded-circle featurette-image img-fluid mx-auto" width="140" height="140" src="~/images/LuisSoto.jpg" border="1"/>
+        <h2>Luis Angel Soto Alata</h2>
+        <p class="mb-0">Ingeniero de Sistemas de Información.</p>
+        <p class="mb-0"><a class="btn mb-0" href="https://www.linkedin.com/in/luissotoalata/" target="_blank"><i class="bi bi-linkedin tamanoletra"></i></a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+</div>

@@ -1,0 +1,87 @@
+﻿@model List<LoginFuzzy.Model.Futbolista>
+
+@{
+    Layout = null;
+}
+
+<style>
+    .baka {
+        display: inline-block;
+        width: 68px;
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    .marginmin {
+        margin: 2px;
+    }
+
+    .mensajto {
+        position: relative;
+        height: 60vh;
+    }
+
+    #baloncito {
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #baloncitopartner {   
+         margin: 5px;
+         width: 100%;
+         position: absolute;
+         top: 60%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+    }
+
+    .margencartitas {
+        width: 270px;
+        margin: 0 -20px 15px 0;
+    }
+
+    .cartascentradas {
+        display: flex;
+        justify-content:center;
+    }
+</style>
+
+@if (Model.Count() > 0)
+{
+    @foreach (var item in Model)
+    {
+        <div class="col cartascentradas">
+            <div class="card margencartitas">
+                <div class="card-body">
+                    <h4 class="card-title">@item.nombre</h4>
+                    <div class="row-3">
+                        <label class="baka">DL: @item.DL</label>
+                        <label class="baka">DC: @item.DC</label>
+                        <label class="baka">MC: @item.MC</label>
+                    </div>
+                    <div class="row-2">
+                        <label class="baka">FW: @item.FW</label>
+                        <label class="baka">PT: @item.PT</label>
+                    </div>
+                    <div class="row-2">
+                        <a id="eliminado" title="Eliminar" onclick="showInPopup('@Url.Page("/HistorialPages/_Delete", "Delete",new {id=item.IdFutbolista},Context.Request.Scheme)','Eliminación de Jugador')" class="btn btn-danger float-end marginmin"><i class="bi bi-trash"></i></a>
+                        <a id="vistazo" title="Visualizar" onclick="showInPopup('@Url.Page("/HistorialPages/_Lista", "Lista",new {id=item.IdFutbolista},Context.Request.Scheme)','@item.nombre')" class="btn btn-primary float-end marginmin"><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="mensajto">
+        <img id="baloncito" src="/images/NotFound.png"/>
+        <br/>
+        <h3 class="centrado" id="baloncitopartner">No se encontraron resultados.</h3>
+    </div>
+}

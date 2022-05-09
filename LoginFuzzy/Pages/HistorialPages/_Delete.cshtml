@@ -1,0 +1,24 @@
+﻿@page
+@model LoginFuzzy.Pages.Shared._DeleteModel
+@{
+    Layout = null;
+}
+<div class="row">
+    <form method="post" onsubmit="submitdelete()">
+         <div class="col-md-12">
+            <div class="centrado">
+                <h5>¿Desea eliminar este jugador?</h5>
+            </div>
+            <p/>
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <input type="hidden" asp-for="Futbolista.IdFutbolista"/>
+                    <button onclick="closePopup()" type="submit" class="btn btn-danger border-dark col-12" asp-page-handler="Deleting">Sí</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-light border-dark col-12" onclick="closePopup()" type="button">No</button>
+                </div>
+            </div>
+        </div>   
+    </form>
+</div>

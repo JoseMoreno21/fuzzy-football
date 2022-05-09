@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASZkCJeTksk69kgMQzmnXjQAAAAACAAAAAAAQZgAAAAEAACAAAADX0kW9usisg/DAnYCut36w32uN1j0tLxpkBKLq3gz7MgAAAAAOgAAAAAIAACAAAAAukhps0q1Ti0qfjD6Mz8+rgLx5behMZmJCtqci66v5jYAAAAB28VDLqqBwVwBRiC3PVxyJoNOmlIM9f5oxSikpRtW9+OqzZ1uuqtasum4zeMUCp0arnJidV8hd6CYQxUPYEAIPUmxFzUaapMu2N6ztN4nw+4tZzdgawZu6OzF9oB3JIrlACCafBVyVYUSu8rM3HuLK7v4Mfzzn585DCn8bvjEUHEAAAADfzTGpbfMzBnXZ+VDnyB1/CEvuNT6xlzoAI8Cf8rOU4DIAe5XZMmRzy1WrLsFDB35vh9ZDQnB+2L8Vs/t/435J</EncryptedPassword>
+    <History>True|2022-04-27T07:28:39.7834882Z;True|2022-04-26T17:34:04.4979046-05:00;False|2022-04-26T17:19:26.1889822-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AuthConnectionString">
+      <Value>Data Source=tcp:fuzzyfootballserver.database.windows.net,1433%3bInitial Catalog=fuzzyfootball_db%3bUser Id=admin-sql%40fuzzyfootballserver%3bPassword=Shingekikk1!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

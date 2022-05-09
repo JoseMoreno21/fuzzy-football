@@ -1,0 +1,39 @@
+﻿@page
+@model PrivacidadModel
+@{
+    ViewData["Title"] = "Política de Privacidad";
+}
+
+<style>
+    .mensajute {
+        position: relative;
+        height: 60vh;
+    }
+
+    #bolonthankyou {
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<div id="placeholdermaxP3"></div>
+<div id="placeholdermaxP4"></div>
+
+<h1 class="spacioarriba">@ViewData["Title"]</h1>
+
+<p>La principal tarea de este sitio web es ayudar a el usuario a analizar su rendimiento u el de otros
+   en el deporte conocido como Fútbol. Además, se permite administrar análisis previos y descargar estos en
+   formato excel. La página web puede ser usada por casi todo tipo de personas, ya que La información recolectada 
+   en este sitio web no es de gravedad. El correo electrónico pedido en el registro no es validado por lo que puede
+   ingresarse uno ficticio y de esta forma evitar poner en riesgo su información personal.</p>
+   <br />
+<p>¡Gracias por usar nuestra página web!</p>
+
+<div class="mensajute">
+    <img class="img-fluid" id="bolonthankyou" src="~/images/ThankYou.png"/>
+</div>

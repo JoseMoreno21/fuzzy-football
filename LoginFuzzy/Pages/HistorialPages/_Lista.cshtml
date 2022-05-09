@@ -1,0 +1,123 @@
+﻿@page
+@model LoginFuzzy.Pages.Shared._ListaModel
+@{
+    Layout = null;
+}
+
+<style>
+    table,
+    td,
+    th {
+      border-collapse: collapse;
+    }
+    
+    th,
+    td {
+      padding: 5px;
+      border: solid 1px;
+      text-align: center;
+    }
+    
+    .vtable td {
+      background: lightgray;
+    }
+
+    .ressa {
+        overflow: auto;
+    }
+</style>
+
+<div class="container col-md-12 ressa">
+    <form method="get">
+        <table class = "vtable">
+          <col>
+          <col>
+          <colgroup span="5"></colgroup>
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="2" rowspan="6" scope="rowgroup">Atributos Físicos</th>
+              <th colspan="2" scope="row">Altura</th>
+              <td>@Model.Futbolista.altura</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Peso</th>
+              <td>@Model.Futbolista.peso</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Musculatura</th>
+              <td>@Model.Futbolista.musculatura</td>
+            </tr>
+        		<tr>
+              <th colspan="2" scope="row">Velocidad</th>
+              <td>@Model.Futbolista.velocidad</td>
+            </tr>
+        		<tr>
+              <th colspan="2" scope="row">Resistencia</th>
+              <td>@Model.Futbolista.resistencia</td>
+            </tr>
+        		<tr>
+              <th colspan="2" scope="row">Agilidad</th>
+              <td>@Model.Futbolista.agilidad</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th colspan="2" rowspan="2" scope="rowgroup" align="center">Atributos Mentales</th>
+              <th colspan="2" scope="row">Confianza</th>
+              <td>@Model.Futbolista.confianza</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Concentración</th>
+              <td>@Model.Futbolista.concentracion</td>
+            </tr>
+          </tbody>
+        	<tbody>
+            <tr>
+              <th colspan="2" rowspan="2" scope="rowgroup">Atributos Tácticos</th>
+              <th colspan="2" scope="row">Toma de decisiones</th>
+              <td>@Model.Futbolista.decisiones</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Creatividad</th>
+              <td>@Model.Futbolista.creatividad</td>
+            </tr>
+          </tbody>
+        	<tbody>
+            <tr>
+              <th colspan="2" rowspan="3" scope="rowgroup">Atributos Técnicos</th>
+              <th colspan="2" scope="row">Dribling</th>
+              <td>@Model.Futbolista.dribling</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Pases</th>
+              <td>@Model.Futbolista.pases</td>
+            </tr>
+            <tr>
+              <th colspan="2" scope="row">Finalización</th>
+              <td>@Model.Futbolista.finalizacion</td>
+            </tr>
+          </tbody>
+        	<tbody>
+        		<tr>
+        			<th colspan="5" scope="colgroup">Resultados</th>
+        		</tr>
+        		<tr>
+              <th colspan="1" scope="col">Defensa Lateral</th>
+        			<th colspan="1" scope="col">Defensa Central</th>
+        			<th colspan="1" scope="col">Medio Campista</th>
+        			<th colspan="1" scope="col">Delantero</th>
+        			<th colspan="1" scope="col">Portero</th>
+            </tr>
+        		<tr>
+        			<td>@Model.Futbolista.DL</td>
+        			<td>@Model.Futbolista.DC</td>
+        			<td>@Model.Futbolista.MC</td>
+        			<td>@Model.Futbolista.FW</td>
+        			<td>@Model.Futbolista.PT</td>
+        		</tr>
+        	</tbody>
+        </table>
+   </form>
+</div>

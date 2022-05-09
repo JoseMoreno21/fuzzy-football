@@ -1,0 +1,88 @@
+﻿@model LoginFuzzy.ViewModels.Login
+@{
+    Layout = null;
+}
+
+<style>
+    .passwordvis {
+        display: inline!important;
+    }
+    .passderecha {
+        display: initial;
+        padding: 10px 10px 3px 3px;
+        margin-left: -40px;
+        opacity: 0.7;
+    }
+    .passderechaP2 {
+        font-size: 18px;
+    }
+</style>
+
+<script>
+    var contador = 0;
+    function showText (x) {
+        x.type = "text";
+        document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
+        contador = 1;
+    }
+
+    function showPassword (x) {
+        x.type = "password";
+        document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
+        document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
+        contador = 0;
+    }
+
+    function showPasswordHover (x) {
+        if(contador == 1){
+            x.type = "password";
+            document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
+            document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
+            contador = 0;
+        }
+    }
+</script>
+
+<div class="modal fade" tabindex="-1" id="form-modallog" role="dialog" aria-hidden="true" aria-labelledby="loginLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginLabel">Login</h5>
+        <button id="videomodalexample" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-12 col-md-12">
+                    <form asp-page-handler="LoginA">
+                        <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()"/>
+                        <div asp-validation-summary="ModelOnly" class="text-danger">
+                        </div>
+                         <div class="mb-3">
+                            <label class="form-label" asp-for="Username">Usuario</label>
+                            <input type="text" asp-for="Username" class="form-control" id="inputnombrelog"/>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Password">Contraseña</label>
+                            <input type="password" asp-for="Password" class="form-control passwordvis" id="passwordvalue"/>
+                            <a class="btn passderecha" onmousedown="showText(passwordvalue)" onmouseup="showPassword(passwordvalue)" onmouseout="showPasswordHover(passwordvalue)"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePassword"></i></a>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" asp-for="RememberMe" class="form-check-input" id="recuerdame"/>
+                            <label class="form-check-label" asp-for="RememberMe">¿Recordarme?</label>
+                        </div>
+                        <div class="mb-2">
+                            <button id="butonlogin" type="button" class="btn btn-primary col-12 loadingclase" data-login="modal">Ingresar</button>
+                        </div>
+                        <div class="centrado">
+                            <a class="cursorpunta" data-transport="ajax-register">¿Aún no estás registrado? Regístrate aquí.</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

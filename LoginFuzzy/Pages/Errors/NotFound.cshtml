@@ -1,0 +1,46 @@
+﻿@page
+@model LoginFuzzy.Pages.Shared.NotFoundModel
+@{
+    ViewData["Title"] = "No Encontrado";
+}
+
+<style>
+    .mensajote {
+        position: relative;
+        height: 60vh;
+    }
+
+    #bolon404 {
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #baloncito404partner {   
+         margin: 5px;
+         width: 100%;
+         position: absolute;
+         top: 80%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+    }
+    #baloncito404partnerP2 {   
+         margin: 5px;
+         position: absolute;
+         top: 95%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+    }
+</style>
+
+
+<div class="mensajote">
+    <img class="img-fluid" id="bolon404" src="~/images/404.png"/>
+    <br/>
+    <h3 class="centrado" id="baloncito404partner">@ViewData["Error"]</h3>
+    <a id="baloncito404partnerP2" class="cursorpunta loadingclase" asp-area="" asp-page="/Index">Vuelve a la página principal.</a>
+</div>

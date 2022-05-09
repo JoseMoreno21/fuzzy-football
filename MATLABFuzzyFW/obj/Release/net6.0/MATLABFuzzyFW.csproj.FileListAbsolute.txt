@@ -1,0 +1,24 @@
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.deps.json
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.pdb
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.csproj.AssemblyReference.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.AssemblyInfoInputs.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.AssemblyInfo.cs
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\refint\MATLABFuzzyFW.dll
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.pdb
+C:\Users\Administrador\source\repos\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\ref\MATLABFuzzyFW.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.deps.json
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\bin\Release\net6.0\MATLABFuzzyFW.pdb
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.csproj.AssemblyReference.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.AssemblyInfoInputs.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.AssemblyInfo.cs
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.csproj.CoreCompileInputs.cache
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\refint\MATLABFuzzyFW.dll
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\MATLABFuzzyFW.pdb
+D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyFW\obj\Release\net6.0\ref\MATLABFuzzyFW.dll

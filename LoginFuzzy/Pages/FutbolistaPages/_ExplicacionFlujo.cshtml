@@ -1,0 +1,34 @@
+﻿@page
+@model LoginFuzzy.Pages.Shared._ExplicacionFlujoModel
+
+@{
+    Layout = null;
+}
+
+<style>
+    .videodimen {
+        height: 300px;
+        width: 100%;
+        display: block;
+    }
+</style>
+
+<script>
+    $(function(){
+        $("#videomodalexample").click(function(){
+            $("#videoexplica").attr("src","");
+            $("#videoexplica").attr("src","https://www.youtube.com/embed/_Q7-QjkSfI8");
+        });
+    });
+</script>
+
+<div class="row">
+    <form method="post" onsubmit="submitdelete()">
+         <div class="col-md-12">
+            <h6>Vea el siguiente video para compreder como funciona el programa en detalle.</h6>
+             <div class="centrado">
+                <iframe id="videoexplica" class="videodimen" src="https://www.youtube.com/embed/_Q7-QjkSfI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </form>
+</div>

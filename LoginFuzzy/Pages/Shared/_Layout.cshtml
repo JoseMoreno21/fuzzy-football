@@ -1,0 +1,101 @@
+﻿@using LoginFuzzy.Model
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FuzzyFootball</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LoginFuzzy.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+    <link rel="icon" href="~/images/favicon.ico"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top navescondido">
+            <div class="container">
+                <a class="navbar-brand loadingclase" asp-area="" asp-page="/Index">
+                    <div class = "logo-image">
+                        <img src="~/images/LogoSoccer.svg" class="img-fluid logodivex"/>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @if(SignInManager.IsSignedIn(User))
+                        {
+                            <ul class="navbar-nav flex-grow-1 justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark topmovil loadingclase" asp-area="" asp-page="/Futbolista">Análisis</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark loadingclase" asp-area="" asp-page="/Historial">Historial</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav d-flex justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger fw-bold cursorpunta" onclick="showInPopup('@Url.Page("/Shared/_Logout", "LogOut",null,Context.Request.Scheme)','Cerrar Sesión')">Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav d-flex justify-content-end flex-grow-1">
+                                <li class="nav-item">
+                                    <a id="loginmodal" class="nav-link topmovil cursorpunta" data-toggle="ajax-modal" data-url="@Url.Page("Index","LoginA")">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="registromodal" class="nav-link cursorpunta" data-toggle="ajax-modalP2" data-url="@Url.Page("Index","RegistroR")">Registro</a>
+                                </li>
+                            </ul>
+                        }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+
+    <div class="modal fade" tabindex="-1" id="form-modal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button id="videomodalexample" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+                
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loading">
+        <img id="loading-image" src="~/images/LoadingBall.gif" height="300" width="200" class="responsive" />
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - FuzzyFootball - <a asp-area="" asp-page="/Privacidad">Privacidad</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

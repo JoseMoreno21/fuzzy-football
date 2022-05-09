@@ -1,0 +1,201 @@
+﻿@page
+@using System.Linq
+@model LoginFuzzy.Pages.FutbolistaModel
+@{
+    ViewData["Title"] = "Análisis";
+}
+
+<style>
+    #helpvideo {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background-color: #0d6efd;
+        color: white;
+        cursor: help;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    .preguntitas {
+        opacity: 0.7;
+        cursor: help;
+    }
+</style>
+
+<script>
+    $(function(){
+        $("#nombrecitofutbol").change(function(){
+            this.value = $.trim(this.value);
+        });
+    });
+</script>
+
+@if (Model.Model == null || Model.Model.nombre == null || Model.Model.DC == 0 || Model.Model.DL == 0 || Model.Model.FW == 0 || Model.Model.PT == 0 || Model.Model.MC == 0)
+{
+<div class="container spacioarriba">
+         <div class="row justify-content-center align-items-center">
+             <div class="col-sm-12 col-md-12 col-lg-6">
+                 <div asp-validation-summary="ModelOnly" class="text-danger">
+                 </div>
+                 <form id="futbolistasubmit" method="post" onsubmit="buttonmando.disabled = true; return true;">
+                     <button type="button" id="helpvideo" title="Explicación del Sistema" onclick="showInPopup('@Url.Page("/FutbolistaPages/_ExplicacionFlujo", "VideoExplicado",null)','Explicación de Flujo')"><i class="bi bi-question-lg"></i></button>
+                     <fieldset class="border p-2">
+                         <legend class="float-none w-auto p-2">Información Personal</legend>
+                             <div class="mb-3">
+                                <label class="form-label" asp-for="Model.nombre">Nombre</label>
+                                <input type="text" asp-for="Model.nombre" class="form-control" id="nombrecitofutbol"/>
+                                <span asp-validation-for="Model.nombre" class="text-danger"></span>
+                            </div>
+                     </fieldset>
+                     <fieldset class="border p-2">
+                         <legend class="float-none w-auto p-2">Atributos Físicos</legend>
+                         <div class="mb-3">
+                             <label for="alturaRange" class="form-label" asp-for="Model.altura">Altura</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Altura','Estatura del jugador de fútbol. Siendo 1 = Muy Bajo y 10 = Muy Alto.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.altura" class="form-range" min="1" max="10" step="0.01" id="alturaRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.altura" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="pesoRange" class="form-label" asp-for="Model.peso">Peso</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Peso','Peso del jugador de fútbol. Siendo 1 = Muy Delgado y 10 = Muy Pesado.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.peso" class="form-range" min="1" max="10" step="0.01" id="pesoRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.peso" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="musculaturaRange" class="form-label" asp-for="Model.musculatura">Musculatura</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Musculatura','Contextura del jugador. Siendo 1 = Muy Débil y 10 = Muy Fornido.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.musculatura" class="form-range" min="1" max="10" step="0.01" id="musculaturaRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.musculatura" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="velocidadRange" class="form-label" asp-for="Model.velocidad">Velocidad</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Velocidad','Velocidad máxima sin balón del jugador. Siendo 1 = Muy Lento y 10 = Muy Rápido.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.velocidad" class="form-range" min="1" max="10" step="0.01" id="velocidadRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.velocidad" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="resistenciaRange" class="form-label" asp-for="Model.resistencia">Resistencia</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Resistencia','Nivel de condición física del jugador (Estamina). Siendo 1 = Estamina Muy Baja y 10 = Estamina Muy Alta.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.resistencia" class="form-range" min="1" max="10" step="0.01" id="resistenciaRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.resistencia" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="agilidadRange" class="form-label" asp-for="Model.agilidad">Agilidad</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Agilidad','Capacidad de cambiar de dirección eficazmente, realización de giros rápidos y evasión de las entradas de los jugadores rivales. Siendo 1 = Muy Torpe y 10 = Muy Ágil.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.agilidad" class="form-range" min="1" max="10" step="0.01" id="agilidadRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.agilidad" class="text-danger"></span>
+                         </div>
+                     </fieldset>
+                     <fieldset class="border p-2">
+                         <legend class="float-none w-auto p-2">Atributos Mentales</legend>
+                         <div class="mb-3">
+                             <label for="confianzaRange" class="form-label" asp-for="Model.confianza">Confianza</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Confianza','Habilidad mental que ayudará a que el jugador pueda realizar acciones riesgosas sin titubear. Siendo 1 = Muy Inseguro y 10 = Muy Confiado.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.confianza" class="form-range" min="1" max="10" step="0.01" id="confianzaRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.confianza" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="concentracionRange" class="form-label" asp-for="Model.concentracion">Concentración</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Concentración','Habilidad mental que ayudará al jugador a estar más estable mentalmente durante el partido, evitando fallos. Siendo 1 = Muy Distraído y 10 = Muy Concetrado.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.concentracion" class="form-range" min="1" max="10" step="0.01" id="concentracionRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.concentracion" class="text-danger"></span>
+                         </div>
+                     </fieldset>
+                     <fieldset class="border p-2">
+                         <legend class="float-none w-auto p-2">Atributos Tácticos</legend>
+                         <div class="mb-3">
+                             <label for="decisionesRange" class="form-label" asp-for="Model.decisiones">Rapidez en decisiones</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Rapidez en decisiones','Habilidad para tomar las mejores decisiones lo más rápido posible en cualquier situación. Siendo 1 = Muy Indeciso y 10 = Muy Decidido.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.decisiones" class="form-range" min="1" max="10" step="0.01" id="decisionesRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.decisiones" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="creatividadRange" class="form-label" asp-for="Model.creatividad">Creatividad</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Creatividad','Habilidad para planear estrategias y jugadas creativas en cualquier situación del partido. Siendo 1 = Creatividad Muy Baja y 10 = Creatividad Muy Alta.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.creatividad" class="form-range" min="1" max="10" step="0.01" id="creatividadRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.creatividad" class="text-danger"></span>
+                         </div>
+                     </fieldset>
+                     <fieldset class="border p-2">
+                         <legend class="float-none w-auto p-2">Atributos Técnicos</legend>
+                         <div class="mb-3">
+                             <label for="driblingRange" class="form-label" asp-for="Model.dribling">Dribbling</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Dribbling','Capacidad del jugador para mantener el control del balón mientras conduce el balón en velocidad. Siendo 1 = Habilidad de Dribling Muy Baja y 10 = Habilidad de Dribling Muy Alta.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.dribling" class="form-range" min="1" max="10" step="0.01" id="driblingRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.dribling" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="pasesRange" class="form-label" asp-for="Model.pases">Pases</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Pases','Capacidad para pasar el balón rápida y precisamente. Siendo 1 = Habilidad de Pases Muy Baja y 10 = Habilidad de Pases Muy Alta.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.pases" class="form-range" min="1" max="10" step="0.01" id="pasesRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.pases" class="text-danger"></span>
+                         </div>
+                         <div class="mb-3">
+                             <label for="finalizacionRange" class="form-label" asp-for="Model.finalizacion">Finalización</label>
+                             <i class="bi bi-info-circle preguntitas" onclick="showInPopupAtributes('Finalización','Precisión del jugador al rematar al arco.. Siendo 1 = Habilidad de Finalización Muy Baja y 10 = Habilidad de Finalización Muy Alta.')"></i>
+                             <output class="box">5.50</output>
+                             <input type="range" asp-for="Model.finalizacion" class="form-range" min="1" max="10" step="0.01" id="finalizacionRange" oninput="this.previousElementSibling.value = this.value" value="5.50"/>
+                             <span asp-validation-for="Model.finalizacion" class="text-danger"></span>
+                         </div>
+                     </fieldset>
+                     <div class="form-group">
+                         <button id="buttonmando" type="submit" class="btn btn-primary col-12 loadingclase">Evaluar</button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+    </div>
+}
+else if (Model.Model != null && Model.Model.nombre != null && Model.Model.DC != 0 && Model.Model.DL != 0 && Model.Model.FW != 0 && Model.Model.PT != 0 && Model.Model.MC != 0)
+{
+    <div class="container spacioarriba">
+         <div class="row justify-content-center align-items-center">
+             <div class="col-sm-12 col-md-12 col-lg-6">
+                 <h1 class="mb-3">Resultados</h1>
+                 <form method="get">
+                     <div class="mb-3">
+                        <label class="form-label">Defensa Central</label>
+                        <output class="box">@Model.Model.DC</output>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">Defensa Lateral</label>
+                        <output class="box">@Model.Model.DL</output>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">MedioCampista</label>
+                        <output class="box">@Model.Model.MC</output>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">Delantero</label>
+                        <output class="box">@Model.Model.FW</output>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">Portero</label>
+                        <output class="box">@Model.Model.PT</output>
+                     </div>
+                     <div class="form-group">
+                        <button type="submit" class="btn btn-primary col-12 loadingclase">Regresar</button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+    </div>
+}

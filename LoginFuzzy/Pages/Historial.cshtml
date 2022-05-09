@@ -1,0 +1,120 @@
+﻿@page
+@using System.Linq
+@model LoginFuzzy.Pages.HistorialModel
+@{
+    ViewData["Title"] = "Historial";
+}
+<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+
+<style>
+    .Jola {
+        display: flex;
+        align-items: center;
+    }
+    .float-child {
+        margin: 0 5px;
+    }
+    .derechita {
+        margin: 0 10px;
+    }
+    .tres:hover {
+        font-weight: bold;
+        color: white;
+        background-color: #0050c5;
+    }
+    .tres.green{
+        color: white;
+        font-weight: bold;
+        background-color: #0050c5;
+    }
+    .visibilityradio {
+        display: none;
+    }
+    .displayjugadores {
+        text-align: right;
+        margin: 70px 0 0 0;
+    }
+    .itemcentrado {
+        align-items: center;
+    }
+    .margeparatop {
+        margin: 5px 0 15px 0;
+    }
+    @@media only screen and (max-width: 700px) {
+        .centradazo {
+            display: inline-table;
+        }
+    }
+</style>
+
+<script>
+    $(function(){
+        $(".btnradio").change(function(){
+            debugger;
+            if(this.checked){
+                $("#botonsubmit").trigger("click");
+            }
+        })
+    })
+    function switch_to_green(el){
+      if(el.parentElement.getAttribute("data-group") == 2) {
+      //Get all buttons of group 2
+      let g2_buttons = document.querySelectorAll('#group2 .tres');
+      for(let i =0; i<g2_buttons.length;i++){
+        //Remove green color from unselected buttons
+        g2_buttons[i].classList.remove('green');
+      }
+      }
+      //Add green color to the only selected one
+      el.classList.add('green');
+    }
+</script>
+
+<div class="col-md-12 displayjugadores">
+    <h4>Total de Jugadores: @ViewData["ListaJugadores"]</h4>
+</div>
+
+<div class="row">
+    <div class="col-md-12 centrado">
+        <div class="row">
+            <form id="formcitoprincipal" method="post" data-ajax="true" data-ajax-method="post" data-ajax-mode="replace" data-ajax-update="#partialviewchange">
+                <div class="form-group">
+                    <div class="row justify-content-center margeparatop">
+                        <div class="col-10 Jola">
+                            <label class="form-label float-child" asp-for="Model.nombre">Buscar:</label>
+                            <input type="text" asp-for="Model.nombre" class="form-control float-child"/>
+                            <span asp-validation-for="Model.nombre" class="text-danger"></span>
+                            <button type="submit" title="Buscar" class="btn btn-primary float-child" id="botonsubmit"><i class="bi bi-search"></i></button>
+                            <a class="btn btn-success" title="Descargar en formato Excel" href="@Url.Page("/Historial", "Excel",null)"><i class="bi bi-file-earmark-excel"></i></a>
+                        </div>
+                    </div>
+                     <div class="btn-group col-md-6 justify-content-center itemcentrado centradazo" id="group2" data-group="2" >
+                         <label class="form-label derechita">Ordenar Por:</label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres green" for="Normal">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="Normal" id="Normal" checked/>Creación
+                         </label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres" for="DL">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="DL" id="DL"/>DL
+                         </label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres" for="DC">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="DC" id="DC"/>DC
+                         </label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres" for="MC">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="MC" id="MC"/>MC
+                         </label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres"for="FW">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="FW" id="FW"/>FW
+                         </label>
+                         <label asp-for="Model.position" onclick="switch_to_green(this)" class="btn btn-primary tres" for="PT">
+                             <input asp-for="Model.position" class="form-check-input visibilityradio btnradio" type="radio" value="PT" id="PT"/>PT
+                         </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row" id="partialviewchange">
+    <partial name="HistorialPages/_PartialHistorial" model="Model.AllFutbolistas"/>
+</div>
