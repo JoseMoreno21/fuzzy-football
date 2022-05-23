@@ -20,28 +20,56 @@
 
 <script>
     var contador = 0;
-    function showText (x) {
+    /*function showText (x) {
         x.type = "text";
         document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
         document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
         contador = 1;
-    }
+    }*/
 
-    function showPassword (x) {
+    $('#togglePassword').on('touchstart mousedown', function(e){
+        document.getElementById("passwordvalue").type = "text";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contador = 1;
+        e.preventDefault();
+    });
+
+    /*function showPassword (x) {
         x.type = "password";
         document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
         document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
         contador = 0;
-    }
+    }*/
 
-    function showPasswordHover (x) {
+    $('#togglePassword').on('touchend mouseup', function(e){
+        document.getElementById("passwordvalue").type = "password";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contador = 0;
+        e.preventDefault();
+    });
+
+
+    $('#togglePassword').on('touchcancel mouseout', function(e){
+        if(contador == 1){
+            document.getElementById("passwordvalue").type = "password";
+            e.classList.toggle("bi-eye-slash-fill");
+            e.classList.toggle("bi-eye-fill");
+            contador = 0;
+            e.preventDefault();
+        }
+    });
+
+    /*function showPasswordHover (x) {
         if(contador == 1){
             x.type = "password";
             document.getElementById("togglePassword").classList.toggle("bi-eye-slash-fill");
             document.getElementById("togglePassword").classList.toggle("bi-eye-fill");
             contador = 0;
         }
-    }
+    }*/
+
 </script>
 
 <div class="modal fade" tabindex="-1" id="form-modallog" role="dialog" aria-hidden="true" aria-labelledby="loginLabel">
@@ -66,7 +94,7 @@
                         <div class="mb-3">
                             <label class="form-label" asp-for="Password">Contraseña</label>
                             <input type="password" asp-for="Password" class="form-control passwordvis" id="passwordvalue"/>
-                            <a class="btn passderecha" onmousedown="showText(passwordvalue)" onmouseup="showPassword(passwordvalue)" onmouseout="showPasswordHover(passwordvalue)"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePassword"></i></a>
+                            <a class="btn passderecha"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePassword"></i></a>
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
                         <div class="mb-3 form-check">

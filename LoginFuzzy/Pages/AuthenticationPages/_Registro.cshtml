@@ -21,7 +21,7 @@
 <script>
     var contador = 0;
     var contadito = 0;
-    function showText (x) {
+    /*function showText (x) {
         x.type = "text";
         document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-slash-fill");
         document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-fill");
@@ -42,9 +42,37 @@
             document.getElementById("togglePasswordRegistro").classList.toggle("bi-eye-fill");
             contador = 0;
         }
-    }
+    }*/
 
-    function showTextPart2 (x) {
+    $('#togglePasswordRegistro').on('touchstart mousedown', function(e){
+        document.getElementById("passwordregistro").type = "text";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contador = 1;
+        e.preventDefault();
+    });
+
+
+    $('#togglePasswordRegistro').on('touchend mouseup', function(e){
+        document.getElementById("passwordregistro").type = "password";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contador = 0;
+        e.preventDefault();
+    });
+
+
+    $('#togglePasswordRegistro').on('touchcancel mouseout', function(e){
+        if(contador == 1){
+            document.getElementById("passwordregistro").type = "password";
+            e.classList.toggle("bi-eye-slash-fill");
+            e.classList.toggle("bi-eye-fill");
+            contador = 0;
+            e.preventDefault();
+        }
+    });
+
+    /*function showTextPart2 (x) {
         x.type = "text";
         document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-slash-fill");
         document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-fill");
@@ -65,7 +93,35 @@
             document.getElementById("toggleConfirmPassword").classList.toggle("bi-eye-fill");
             contadito = 0;
         }
-    }
+    }*/
+
+    $('#toggleConfirmPassword').on('touchstart mousedown', function(e){
+        document.getElementById("passwordconfirmarregistro").type = "text";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contadito = 1;
+        e.preventDefault();
+    });
+
+
+    $('#toggleConfirmPassword').on('touchend mouseup', function(e){
+        document.getElementById("passwordconfirmarregistro").type = "password";
+        e.classList.toggle("bi-eye-slash-fill");
+        e.classList.toggle("bi-eye-fill");
+        contadito = 0;
+        e.preventDefault();
+    });
+
+
+    $('#toggleConfirmPassword').on('touchcancel mouseout', function(e){
+        if(contadito == 1){
+            document.getElementById("passwordconfirmarregistro").type = "password";
+            e.classList.toggle("bi-eye-slash-fill");
+            e.classList.toggle("bi-eye-fill");
+            contadito = 0;
+            e.preventDefault();
+        }
+    });
 </script>
 
 
@@ -97,13 +153,13 @@
                             <div class="col-md-6 emer">
                                 <label class="form-label" asp-for="Password">Contraseña</label>
                                 <input type="password" asp-for="Password" class="form-control passwordvisreg" id="passwordregistro"/>
-                                <a class="btn passderechare" onmousedown="showText(passwordregistro)" onmouseup="showPassword(passwordregistro)" onmouseout="showPasswordHover(passwordregistro)"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePasswordRegistro"></i></a>
+                                <a class="btn passderechare"><i class="passderechaP2 bi bi-eye-slash-fill" id="togglePasswordRegistro"></i></a>
                                 <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label" asp-for="ConfirmPassword">Confirmar Contraseña</label>
                                 <input type="password" asp-for="ConfirmPassword" class="form-control passwordvisreg" id="passwordconfirmarregistro"/>
-                                <a class="btn passderechare" onmousedown="showTextPart2(passwordconfirmarregistro)" onmouseup="showPasswordPart2(passwordconfirmarregistro)" onmouseout="showPasswordHoverPart2(passwordconfirmarregistro)"><i class="passderechaP2 bi bi-eye-slash-fill" id="toggleConfirmPassword"></i></a>
+                                <a class="btn passderechare"><i class="passderechaP2 bi bi-eye-slash-fill" id="toggleConfirmPassword"></i></a>
                                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
                         </div>

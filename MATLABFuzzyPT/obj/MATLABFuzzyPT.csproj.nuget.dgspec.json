@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\TDP\\Sprint 3\\LoginFuzzy\\LoginFuzzy\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj": {}
+    "D:\\Documents\\TDP\\Sprint 3\\Fuzzy_Football\\fuzzy-football\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\TDP\\Sprint 3\\LoginFuzzy\\LoginFuzzy\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj": {
+    "D:\\Documents\\TDP\\Sprint 3\\Fuzzy_Football\\fuzzy-football\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\TDP\\Sprint 3\\LoginFuzzy\\LoginFuzzy\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj",
+        "projectUniqueName": "D:\\Documents\\TDP\\Sprint 3\\Fuzzy_Football\\fuzzy-football\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj",
         "projectName": "MATLABFuzzyPT",
-        "projectPath": "D:\\Documents\\TDP\\Sprint 3\\LoginFuzzy\\LoginFuzzy\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj",
+        "projectPath": "D:\\Documents\\TDP\\Sprint 3\\Fuzzy_Football\\fuzzy-football\\MATLABFuzzyPT\\MATLABFuzzyPT.csproj",
         "packagesPath": "C:\\Users\\Jose\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\TDP\\Sprint 3\\LoginFuzzy\\LoginFuzzy\\MATLABFuzzyPT\\obj\\",
+        "outputPath": "D:\\Documents\\TDP\\Sprint 3\\Fuzzy_Football\\fuzzy-football\\MATLABFuzzyPT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

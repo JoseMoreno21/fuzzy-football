@@ -185,6 +185,7 @@ $(function () {
 
         $.post(actionUrl, dataToSend).done(function (data) {
             var newBody = $('.modal-body', data);
+            //console.log(newBody);
             placeholderElementP4.find('.modal-body').replaceWith(newBody);
 
             var isValid = newBody.find('[name="IsValidP2"]').val() == 'True';

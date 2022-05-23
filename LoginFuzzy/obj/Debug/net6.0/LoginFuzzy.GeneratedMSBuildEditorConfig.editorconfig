@@ -8,77 +8,77 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LoginFuzzy
 build_property.RootNamespace = LoginFuzzy
-build_property.ProjectDir = D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\LoginFuzzy\
+build_property.ProjectDir = D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\LoginFuzzy\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\LoginFuzzy
+build_property.MSBuildProjectDirectory = D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\LoginFuzzy
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/AuthenticationPages/_Login.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/AuthenticationPages/_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25QYWdlc1xfTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/AuthenticationPages/_Registro.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/AuthenticationPages/_Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25QYWdlc1xfUmVnaXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Error.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Errors/NotFound.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Errors/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JzXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Futbolista.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Futbolista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnV0Ym9saXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/FutbolistaPages/_ExplicacionFlujo.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/FutbolistaPages/_ExplicacionFlujo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnV0Ym9saXN0YVBhZ2VzXF9FeHBsaWNhY2lvbkZsdWpvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Historial.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Historial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/HistorialPages/_Delete.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/HistorialPages/_Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWFsUGFnZXNcX0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/HistorialPages/_Lista.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/HistorialPages/_Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWFsUGFnZXNcX0xpc3RhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/HistorialPages/_PartialHistorial.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/HistorialPages/_PartialHistorial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWFsUGFnZXNcX1BhcnRpYWxIaXN0b3JpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Index.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Privacidad.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Privacidad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjaWRhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Shared/_Logout.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Shared/_Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/_ViewImports.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/_ViewStart.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documents/TDP/Sprint 3/LoginFuzzy/LoginFuzzy/LoginFuzzy/Pages/Shared/_Layout.cshtml]
+[D:/Documents/TDP/Sprint 3/Fuzzy_Football/fuzzy-football/LoginFuzzy/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ykeuu6r48t

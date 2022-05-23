@@ -22,3 +22,15 @@ D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyPT\obj\Release\net6.0
 D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyPT\obj\Release\net6.0\refint\MATLABFuzzyPT.dll
 D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.pdb
 D:\Documents\TDP\Sprint 3\LoginFuzzy\LoginFuzzy\MATLABFuzzyPT\obj\Release\net6.0\ref\MATLABFuzzyPT.dll
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\bin\Release\net6.0\MATLABFuzzyPT.deps.json
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\bin\Release\net6.0\MATLABFuzzyPT.dll
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\bin\Release\net6.0\MATLABFuzzyPT.pdb
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.csproj.AssemblyReference.cache
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.AssemblyInfoInputs.cache
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.AssemblyInfo.cs
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.csproj.CoreCompileInputs.cache
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.dll
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\refint\MATLABFuzzyPT.dll
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\MATLABFuzzyPT.pdb
+D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\MATLABFuzzyPT\obj\Release\net6.0\ref\MATLABFuzzyPT.dll

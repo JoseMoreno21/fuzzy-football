@@ -3,7 +3,7 @@
   <PropertyGroup>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>Fuzzy-Football-Web-App</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Documents\TDP\Sprint 3\Fuzzy_Football\fuzzy-football\LoginFuzzy\Properties\PublishProfiles\Fuzzy-Football-Web-App1.pubxml</NameOfLastUsedPublishProfile>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

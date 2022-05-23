@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PlatformTarget>x64</PlatformTarget>
+    <UserSecretsId>edc3b341-c166-4534-8aba-0dfe2bfe5b46</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
